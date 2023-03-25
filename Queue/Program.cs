@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-//У вас есть множество целых чисел. Каждое целое число - это сумма покупки.
-//Вам нужно обслуживать клиентов до тех пор, пока очередь не станет пуста.
-//После каждого обслуженного клиента деньги нужно добавлять на наш счёт и выводить его в консоль.
-//После обслуживания каждого клиента программа ожидает нажатия любой клавиши, после чего затирает консоль и по новой выводит всю информацию, только уже со следующим клиентом
 
 namespace Queue
 {
@@ -19,20 +11,36 @@ namespace Queue
             Queue<int> shoppingQueue = new Queue<int>();
             Random rand = new Random();
             bool queue = true;
-
-            int numberBuyers = rand.Next();
+            int firstValueForTest = 0;
+            int secondValueForTest = 10;
+            int numberBuyers = rand.Next(firstValueForTest,secondValueForTest);
             int purchaseAmount;
+            int accountTotal =0;
 
             while (numberBuyers !=0)
             {
-                purchaseAmount = rand.Next();
+                purchaseAmount = rand.Next(firstValueForTest, secondValueForTest);
                 shoppingQueue.Enqueue(purchaseAmount);
                 numberBuyers--;
             }
 
             while (queue)
             {
-                Console.WriteLine($"Счет текущего клиента: {shoppingQueue} "); ;
+                Console.WriteLine($"Счет текущего клиента: {shoppingQueue.First()}. \nСчет Магазина: {accountTotal}");
+                accountTotal += shoppingQueue.Dequeue();
+                Console.WriteLine($"Клиент совершил покупку. Счет магазина: {accountTotal}");
+                Console.ReadKey();
+
+                if (shoppingQueue.Count!=0)
+                {
+                    Console.Clear();
+                }
+                else
+                {
+                    queue = false;
+                    Console.WriteLine($"Очередь закончилась, вы обслужили всех клиентов");
+                    Console.ReadKey();
+                }
             }
         }
     }
