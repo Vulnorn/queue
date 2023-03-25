@@ -9,22 +9,22 @@ namespace Queue
         static void Main(string[] args)
         {
             Queue<int> shoppingQueue = new Queue<int>();
-            Random rand = new Random();
-            bool queue = true;
+            Random random = new Random();
+            bool hasQueue = true;
             int firstValueForTest = 0;
             int secondValueForTest = 10;
-            int numberBuyers = rand.Next(firstValueForTest,secondValueForTest);
+            int numberBuyers = random.Next(firstValueForTest,secondValueForTest);
             int purchaseAmount;
             int accountTotal =0;
 
             while (numberBuyers !=0)
             {
-                purchaseAmount = rand.Next(firstValueForTest, secondValueForTest);
+                purchaseAmount = random.Next(firstValueForTest, secondValueForTest);
                 shoppingQueue.Enqueue(purchaseAmount);
                 numberBuyers--;
             }
 
-            while (queue)
+            while (hasQueue)
             {
                 Console.WriteLine($"Счет текущего клиента: {shoppingQueue.First()}. \nСчет Магазина: {accountTotal}");
                 accountTotal += shoppingQueue.Dequeue();
@@ -37,7 +37,7 @@ namespace Queue
                 }
                 else
                 {
-                    queue = false;
+                    hasQueue = false;
                     Console.WriteLine($"Очередь закончилась, вы обслужили всех клиентов");
                     Console.ReadKey();
                 }
