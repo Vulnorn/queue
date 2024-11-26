@@ -6,3 +6,10 @@ C:\Users\mixad\GitRepost\queue\Queue\obj\Debug\Queue.csproj.SuggestedBindingRedi
 C:\Users\mixad\GitRepost\queue\Queue\obj\Debug\Queue.csproj.CoreCompileInputs.cache
 C:\Users\mixad\GitRepost\queue\Queue\obj\Debug\Queue.exe
 C:\Users\mixad\GitRepost\queue\Queue\obj\Debug\Queue.pdb
+C:\Users\mixad\Source\Repos\Vulnorn\queue\bin\Debug\Queue.exe.config
+C:\Users\mixad\Source\Repos\Vulnorn\queue\bin\Debug\Queue.exe
+C:\Users\mixad\Source\Repos\Vulnorn\queue\bin\Debug\Queue.pdb
+C:\Users\mixad\Source\Repos\Vulnorn\queue\obj\Debug\Queue.csproj.AssemblyReference.cache
+C:\Users\mixad\Source\Repos\Vulnorn\queue\obj\Debug\Queue.csproj.CoreCompileInputs.cache
+C:\Users\mixad\Source\Repos\Vulnorn\queue\obj\Debug\Queue.exe
+C:\Users\mixad\Source\Repos\Vulnorn\queue\obj\Debug\Queue.pdb
